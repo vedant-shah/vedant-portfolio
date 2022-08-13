@@ -23,7 +23,7 @@ function Experience() {
           <Fade
             direction="up"
             className="timeline"
-            style={{ fontSize: "0.7rem" }}>
+            style={{ fontSize: "0.66rem" }}>
             <Timeline>
               <Event
                 interval={"Apr-Aug 2022"}

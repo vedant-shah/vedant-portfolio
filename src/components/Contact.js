@@ -8,10 +8,7 @@ import connect from "../images/connect.svg";
 import { Fade, JackInTheBox } from "react-awesome-reveal";
 
 function Contact() {
-  const [successAlertToggle, setSuccessAlertToggle] = useState("none");
-  const [failureAlertToggle, setFailureAlertToggle] = useState("none");
   const [alert, setAlert] = useState("");
-  let resStatus = "";
   return (
     <>
       <div
@@ -45,15 +42,15 @@ function Contact() {
             }}>
             <div
               className="alert alert-success"
-              style={{ display: successAlertToggle }}
+              style={{ display: alert === "success" ? "block" : "none" }}
               role="alert">
               Thank you. You will be contacted shortly.
             </div>
             <div
               className="alert alert-danger"
-              style={{ display: failureAlertToggle }}
+              style={{ display: alert === "failure" ? "block" : "none" }}
               role="alert">
-              Something went wrong.
+              Something went wrong. Try again Later.
             </div>
             <Formik
               initialValues={{
@@ -61,60 +58,39 @@ function Contact() {
                 email: "",
                 message: "",
               }}
-              onSubmit={(values, { resetForm }) => {
+              onSubmit={async (values, { resetForm }) => {
                 console.log(values);
-                fetch("http://localhost:5000/api/contact", {
-                  method: "POST", // or 'PUT'
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify(values),
-                })
-                  .then((response) => {
-                    resStatus = response.status;
-                    response.json();
-                    console.log(response.json());
-                  })
-                  .then((data) => {
-                    console.log("Success:", data);
-                    console.log("status:", resStatus);
-                    if (resStatus === 200) {
-                      setAlert("success");
-                      //   setSuccessAlertToggle("block");
-                      //   setFailureAlertToggle("none");
-                      setTimeout(() => {
-                        // setSuccessAlertToggle("none");
-                        // setFailureAlertToggle("none");
-                        setAlert("");
-                      }, 3000);
-                      resetForm();
-                    } else {
-                      setAlert("failure");
-                      //   setSuccessAlertToggle("none");
-                      //   setFailureAlertToggle("block");
-                      setTimeout(() => {
-                        setAlert("");
-                        // setSuccessAlertToggle("none");
-                        // setFailureAlertToggle("none");
-                      }, 3000);
-                      resetForm();
+                try {
+                  const rawResponse = await fetch(
+                    "http://localhost:5000/api/contact",
+                    {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify(values),
                     }
-                  })
-                  .catch((error) => {
-                    setAlert("failure");
-                    // setSuccessAlertToggle("none");
-                    // setFailureAlertToggle("block");
+                  );
+                  console.log("resp ", rawResponse);
+                  const content = await rawResponse.json();
+                  console.log(content);
+                  if (rawResponse) {
+                    setAlert("success");
                     setTimeout(() => {
-                      //   setSuccessAlertToggle("none");
-                      //   setFailureAlertToggle("none");
                       setAlert("");
+                      // resetForm();
                     }, 3000);
-                    resetForm();
-                    console.error("Error:", error);
-                  });
+                  }
+                } catch (error) {
+                  setAlert("failure");
+                  setTimeout(() => {
+                    setAlert("");
+                    // resetForm();
+                  }, 3000);
+                }
               }}>
               {() => (
-                <Form className="d-flex flex-column" style={{ width: "55%" }}>
+                <Form className="d-flex flex-column" style={{ width: "65%" }}>
                   <MDBInputGroup
                     textBefore="Full Name"
                     className="mb-3"

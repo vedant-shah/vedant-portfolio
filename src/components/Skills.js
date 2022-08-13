@@ -24,7 +24,7 @@ function Skills() {
               <div
                 data-aos="fade-right"
                 className="familiar-wrapper-1-left d-flex justify-content-center align-items-center "
-                style={{ height: "35vh", width: "35vw" }}>
+                style={{ height: "30vh", width: "35vw" }}>
                 <h2 className="mont text-light">Confident</h2>
               </div>
             </Fade>
@@ -32,7 +32,7 @@ function Skills() {
               <div
                 data-aos="fade-left"
                 className="familiar-wrapper-1-right d-flex  justify-content-around align-items-center  "
-                style={{ fontSize: "4rem", width: "65vw", height: "35vh" }}>
+                style={{ fontSize: "4rem", width: "65vw", height: "30vh" }}>
                 <FaReact style={{ color: "#61DBFB" }} />
                 <DiJavascript1 style={{ color: "#f7df1e" }} />
                 <FaHtml5 style={{ color: "#F16529" }} />
@@ -45,7 +45,7 @@ function Skills() {
               <div
                 data-aos="fade-left"
                 className="familiar-wrapper-2-left d-flex justify-content-center align-items-center "
-                style={{ height: "35vh", width: "35vw" }}>
+                style={{ height: "30vh", width: "35vw" }}>
                 <h2 className="mont text-light">Familiar</h2>
               </div>
             </Fade>
@@ -53,7 +53,7 @@ function Skills() {
               <div
                 data-aos="fade-right"
                 className="familiar-wrapper-2-right d-flex  justify-content-around align-items-center  "
-                style={{ fontSize: "4rem", width: "65vw", height: "35vh" }}>
+                style={{ fontSize: "4rem", width: "65vw", height: "30vh" }}>
                 <SiMongodb style={{ color: "#3FA037" }} />
                 <SiExpress style={{ color: "red" }} />
                 <FaNodeJs style={{ color: "#68A063" }} />
