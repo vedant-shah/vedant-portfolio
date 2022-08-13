@@ -8,7 +8,6 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
-    "aos": "^2.3.4",
     "downloadjs": "^1.4.7",
     "formik": "^2.2.9",
     "mdb-react-ui-kit": "^4.1.0",
