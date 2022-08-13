@@ -22,12 +22,6 @@
 #about-container {
   height: 100vh;
 }
-@media (max-height: 800px) {
-  .about-wrapper-right,
-  .pfp {
-    display: none !important;
-  }
-}
 @media (min-width: 768px) {
   #about-container {
     flex-direction: row !important;
@@ -48,6 +42,19 @@
   font-family: Roboto, Helvetica, Arial, sans-serif !important;
 }
 @media (max-width: 768px) {
+  @media (max-height: 800px) {
+    .about-wrapper-right,
+    .pfp {
+      display: none !important;
+    }
+    .exp {
+      flex-direction: column !important;
+      height: 100vh !important;
+    }
+    .timeline {
+      font-size: 0.5rem !important;
+    }
+  }
   .about-wrapper-right {
     width: 100% !important;
     height: 40% !important;

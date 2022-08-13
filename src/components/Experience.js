@@ -20,7 +20,10 @@ function Experience() {
         <div
           data-aos="zoom-in-down"
           className="timeline-wrapper col-md-8 d-flex justify-content-center align-items-center">
-          <Fade direction="up" cascade style={{ fontSize: "0.7rem" }}>
+          <Fade
+            direction="up"
+            className="timeline"
+            style={{ fontSize: "0.7rem" }}>
             <Timeline>
               <Event
                 interval={"Apr-Aug 2022"}
