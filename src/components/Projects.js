@@ -78,6 +78,7 @@ function Projects() {
                           <DiGithubBadge style={{ fontSize: "1.5rem" }} />
                         </MDBBtn>
                         <a
+                          rel="noreferrer"
                           href={`${element.hosting}`}
                           target="_blank"
                           style={{ color: "rgb(100, 255, 218)" }}>
@@ -115,7 +116,7 @@ function Projects() {
           <a
             href="https://github.com/vedant-shah?tab=repositories"
             target="_blank"
-            data-aos="zoom-in-up"
+            rel="noreferrer"
             style={{ color: "rgb(100, 255, 218)", fontSize: "4rem" }}>
             <span style={{ color: "rgb(204, 214, 246)", fontSize: "1.5rem" }}>
               Find more on

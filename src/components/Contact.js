@@ -11,7 +11,7 @@ function Contact() {
   const [successAlertToggle, setSuccessAlertToggle] = useState("none");
   const [failureAlertToggle, setFailureAlertToggle] = useState("none");
   const [alert, setAlert] = useState("");
-  const [resStatus, setResStatus] = useState("");
+  let resStatus = "";
   return (
     <>
       <div
@@ -71,8 +71,9 @@ function Contact() {
                   body: JSON.stringify(values),
                 })
                   .then((response) => {
-                    setResStatus(response.status);
+                    resStatus = response.status;
                     response.json();
+                    console.log(response.json());
                   })
                   .then((data) => {
                     console.log("Success:", data);

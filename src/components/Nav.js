@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import download from "downloadjs";
 import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
-import { MDBInputGroup } from "mdb-react-ui-kit";
 import {
   MDBContainer,
   MDBNavbar,

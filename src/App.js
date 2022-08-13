@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import "./index.css";
 import "./App.css";
