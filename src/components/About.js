@@ -30,7 +30,7 @@ function About() {
               through my passion for coding, I've learnt to explore new
               technologies in the world of the web. Keeping the experience of a
               user as the highest priority, I can develop websites and web
-              softwares.
+              software.
               <br /> <br />I enjoy connecting the dots: be it ideas from
               different disciplines, people from different teams, or
               applications from different industries.

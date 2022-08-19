@@ -78,14 +78,14 @@ function Contact() {
                     setAlert("success");
                     setTimeout(() => {
                       setAlert("");
-                      // resetForm();
+                      resetForm();
                     }, 3000);
                   }
                 } catch (error) {
                   setAlert("failure");
                   setTimeout(() => {
                     setAlert("");
-                    // resetForm();
+                    resetForm();
                   }, 3000);
                 }
               }}>
