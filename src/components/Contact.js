@@ -6,8 +6,7 @@ import { SiGmail } from "react-icons/si";
 import { DiGithubBadge } from "react-icons/di";
 import connect from "../images/connect.svg";
 import { Fade, JackInTheBox } from "react-awesome-reveal";
-// import { Bars } from "react-loader-spinner";
-// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Spinner from "./Spinner";
 
 function Contact() {
   const [alert, setAlert] = useState("");
@@ -50,15 +49,11 @@ function Contact() {
               role="alert">
               Thank you. You will be contacted shortly.
             </div>
-            {/* <Bars
-              height="80"
-              width="80"
-              color="rgb(125, 18, 255)"
-              ariaLabel="bars-loading"
-              wrapperStyle={{}}
-              wrapperClass=""
-              visible={loading}
-            /> */}
+            <div
+              className="spin"
+              style={{ display: loading ? "block" : "none" }}>
+              <Spinner />
+            </div>
             <div
               className="alert alert-danger"
               style={{ display: alert === "failure" ? "block" : "none" }}
