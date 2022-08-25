@@ -11,7 +11,6 @@ import Spinner from "./Spinner";
 function Contact() {
   const [alert, setAlert] = useState("");
   let [loading, setLoading] = useState(false);
-  let [color, setColor] = useState("rgb(125, 18, 255)");
   return (
     <>
       <div
