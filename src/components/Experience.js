@@ -1,54 +1,80 @@
 import React from "react";
-import { Timeline, Event } from "react-timeline-scribble";
+// import { Timeline, Event } from "react-timeline-scribble";
+import {
+  Timeline,
+  Events,
+  TextEvent,
+  themes,
+  createTheme,
+} from "@merc/react-timeline";
 import { Fade } from "react-awesome-reveal";
 function Experience() {
+  const customTheme = createTheme(themes.default, {
+    card: {
+      backgroundColor: "#141414!important",
+      color: "#ffffff",
+    },
+    date: {
+      backgroundColor: "  rgba(0,0,0,0)",
+    },
+    marker: {
+      borderColor: "#FFCC55",
+      backgroundColor: "#000",
+    },
+    timelineTrack: {
+      backgroundColor: "rgb(85, 136, 255)",
+    },
+  });
   return (
     <>
       <div
-        className="container d-flex exp px-4 align-items-center"
-        style={{ fontSize: "0.55rem", height: "80vh" }}>
+        className="container d-flex exp px-4 align-items-center justify-content-center"
+        style={{ fontSize: "0.55rem", height: "100vh" }}>
         <div className="experiences-wrapper col-md-4">
           <Fade direction="left">
             <h1
               data-aos="fade-right"
               className="mont mb-4"
-              style={{ color: "black" }}>
+              style={{ color: "whitesmoke" }}>
               My <span style={{ color: "rgb(85, 136, 255)" }}>Experience</span>
             </h1>
           </Fade>
         </div>
-        <div
-          data-aos="zoom-in-down"
-          className="timeline-wrapper col-md-8 d-flex justify-content-center align-items-center">
-          <Fade
-            direction="up"
-            className="timeline"
-            style={{ fontSize: "0.66rem" }}>
-            <Timeline>
-              <Event
-                interval={"Apr-Aug 2022"}
-                title={"React Developer Intern"}
-                subtitle={"Neelitech"}>
+        <div className="timeline-wrapper col-md-8 d-flex justify-content-center align-items-center">
+          <Fade direction="up" className="timeline" cascade>
+            <Timeline theme={customTheme}>
+              <Events style={{ fontSize: "0.65rem" }} id="events">
+                <TextEvent
+                  date="Apr 2022 - Present"
+                  text="######React Developer Intern @ *Neelitech*  
+                  
                 Developed a Payroll Automation Software. Contributed in
-                frontend, feature functionality and logic building.
-              </Event>
-              <Event
-                interval={"2020-2024"}
-                title={"B.E. Information Science and Engineering"}
-                subtitle={"NMIT, Bangalore: CGPA-9.11 (Upto 4th sem)"}></Event>
-              <Event
-                interval={"Mar 2020"}
-                title={"12th-ISC Board"}
-                subtitle={"Vidya Niketan School - 91%"}></Event>
-              <Event
-                interval={"Oct-Nov 2019"}
-                title={"Head of Information Technology"}
-                subtitle={"Bangalore Model United Nations"}>
-                Various Roles like social media handle, designing of posters and
-                certificates.
-                <br />
-                Other roles included managing Registrations and Trailer making
-              </Event>
+                frontend, features, functionality and logic building."
+                />
+
+                <TextEvent
+                  date="2020-2024"
+                  text="######B.E. Information Science and Engineering**  
+                ***NMIT, Bangalore***  
+                9.11 CGPA (Upto 4th sem)  
+                "
+                />
+                <TextEvent
+                  date="Mar 2020"
+                  text="######12th-ISC Board**  
+                ***Vidya Niketan School***  
+                91% : PCMC
+                "
+                />
+                <TextEvent
+                  date="Oct-Nov 2019"
+                  text="######Head of Information Technology**  
+                ***Bangalore Model United Nations***  
+                Various Roles like Social Media Handle, Registration Management, Designing of Posters and
+                Certificates.
+                "
+                />
+              </Events>
             </Timeline>
           </Fade>
         </div>

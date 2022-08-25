@@ -41,6 +41,9 @@
   font-weight: bold;
   font-family: Roboto, Helvetica, Arial, sans-serif !important;
 }
+.timeline-wrapper {
+  font-size: 0.5rem !important;
+}
 @media (max-width: 768px) {
   @media (max-height: 800px) {
     .about-wrapper-right,
@@ -96,12 +99,16 @@
 
   .exp {
     flex-direction: column !important;
-    height: 75vh !important;
+    height: 100vh !important;
     font-size: 0.7rem !important;
   }
   .contact {
     flex-direction: column !important;
   }
+  .markdown h6 {
+    font-size: small;
+  }
+
   .contact-left,
   .contact-right {
     width: 90% !important;

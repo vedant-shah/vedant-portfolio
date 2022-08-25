@@ -9,15 +9,12 @@ function Home(props) {
         className="container d-flex flex-column align-items-start justify-content-center px-3"
         id="main-container">
         <Fade cascade duration={500}>
-          <h1 data-aos="fade-right" className="main-page-title">
-            Hi, I'm Vedant.
-          </h1>
-          <h1 data-aos="fade-right" className="main-page-title-2">
+          <h1 className="main-page-title">Hi, I'm Vedant.</h1>
+          <h1 className="main-page-title-2">
             I develop things for the{" "}
             <span style={{ color: "rgb(100, 255, 218)" }}> web</span>.
           </h1>
           <p
-            data-aos="fade-right"
             className="main-para md-w-50 my-4"
             style={{ fontSize: "1.1rem", color: "gray" }}>
             I'm a full stack developer and an Information Science and
@@ -28,7 +25,6 @@ function Home(props) {
           </p>
 
           <MDBBtn
-            data-aos="fade-right"
             outline
             style={{
               color: "rgb(100, 255, 218)",

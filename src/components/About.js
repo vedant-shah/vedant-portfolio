@@ -23,7 +23,7 @@ function About() {
               flexDirection: "column",
             }}>
             <h1 data-aos="fade-right" className="text-light mont about my-3">
-              About <span style={{ color: "rgb(255, 72, 165)" }}> Me </span>
+              About <span style={{ color: "rgb(224, 0, 133)" }}> Me </span>
             </h1>
             <p data-aos="fade-right" className="text-light">
               Hi, I'm Vedant. I've always been the geeky tech enthusiast and
@@ -40,8 +40,8 @@ function About() {
               className="my-3"
               onClick={saveFile}
               style={{
-                color: "rgb(255, 72, 165)",
-                borderColor: "rgb(255, 72, 165)",
+                color: "rgb(224, 0, 133)",
+                borderColor: "rgb(224, 0, 133)",
                 width: "45%",
               }}>
               Download Resume
@@ -61,19 +61,19 @@ function About() {
               data-aos="fade-up"
               className="img-wrapper"
               style={{
-                border: "3px solid rgb(255, 72, 165)",
+                border: "3px solid rgb(224, 0, 133)",
                 borderRadius: "0.25rem",
               }}>
               <img
                 src={pfp}
                 alt=""
                 style={{
-                  height: "60%",
+                  height: "335px",
                   position: "relative",
                   right: "20px",
                   bottom: "20px",
                 }}
-                className="rounded pfp .hover-shadow"
+                className="rounded pfp hover-shadow"
               />
             </div>
           </Fade>

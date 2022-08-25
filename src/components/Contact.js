@@ -6,9 +6,13 @@ import { SiGmail } from "react-icons/si";
 import { DiGithubBadge } from "react-icons/di";
 import connect from "../images/connect.svg";
 import { Fade, JackInTheBox } from "react-awesome-reveal";
+// import { Bars } from "react-loader-spinner";
+// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function Contact() {
   const [alert, setAlert] = useState("");
+  let [loading, setLoading] = useState(false);
+  let [color, setColor] = useState("rgb(125, 18, 255)");
   return (
     <>
       <div
@@ -46,6 +50,15 @@ function Contact() {
               role="alert">
               Thank you. You will be contacted shortly.
             </div>
+            {/* <Bars
+              height="80"
+              width="80"
+              color="rgb(125, 18, 255)"
+              ariaLabel="bars-loading"
+              wrapperStyle={{}}
+              wrapperClass=""
+              visible={loading}
+            /> */}
             <div
               className="alert alert-danger"
               style={{ display: alert === "failure" ? "block" : "none" }}
@@ -60,6 +73,7 @@ function Contact() {
               }}
               onSubmit={async (values, { resetForm }) => {
                 console.log(values);
+                setLoading(true);
                 try {
                   const rawResponse = await fetch(
                     "http://localhost:5000/api/contact",
@@ -76,12 +90,14 @@ function Contact() {
                   console.log(content);
                   if (rawResponse) {
                     setAlert("success");
+                    setLoading(false);
                     setTimeout(() => {
                       setAlert("");
                       resetForm();
                     }, 3000);
                   }
                 } catch (error) {
+                  setLoading(false);
                   setAlert("failure");
                   setTimeout(() => {
                     setAlert("");

@@ -20,7 +20,7 @@ function Projects() {
       hosting: "https://watch-this-next.netlify.app/",
       description:
         "Introducing watch-this-next, a snappy modern tool to easily get movie or tv show recommendations. Chose from the top, popular, now playing categories, or answer few simple questions and let us recommend a movie/tv show specially for you!",
-      stack: " ReactJs • NextJs • MaterialUI",
+      stack: " NextJs • ReactJs • MaterialUI",
     },
     {
       name: "Weather App",
@@ -34,8 +34,8 @@ function Projects() {
   return (
     <>
       <div
-        className="container d-flex flex-column px-4 align-items-center"
-        style={{ height: "85vh" }}>
+        className="container d-flex flex-column px-4 align-items-center justify-content-center"
+        style={{ height: "80vh" }}>
         <Slide direction="down">
           <h1 data-aos="fade-down" className="my-2 mont">
             My <span style={{ color: "rgb(100, 255, 218)" }}>Projects</span>

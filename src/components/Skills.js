@@ -24,7 +24,7 @@ function Skills() {
               <div
                 data-aos="fade-right"
                 className="familiar-wrapper-1-left d-flex justify-content-center align-items-center "
-                style={{ height: "30vh", width: "35vw" }}>
+                style={{ height: "30vh", width: "30vw" }}>
                 <h2 className="mont text-light">Confident</h2>
               </div>
             </Fade>
@@ -33,10 +33,38 @@ function Skills() {
                 data-aos="fade-left"
                 className="familiar-wrapper-1-right d-flex  justify-content-around align-items-center  "
                 style={{ fontSize: "4rem", width: "65vw", height: "30vh" }}>
-                <FaReact style={{ color: "#61DBFB" }} />
-                <DiJavascript1 style={{ color: "#f7df1e" }} />
-                <FaHtml5 style={{ color: "#F16529" }} />
-                <IoLogoCss3 style={{ color: "#264de4" }} />
+                <div className="d-flex flex-column align-items-center">
+                  <FaReact style={{ color: "#61DBFB" }} />
+                  <span
+                    className="pt-2"
+                    style={{ fontSize: "0.75rem", color: "#61DBFB" }}>
+                    ReactJS
+                  </span>
+                </div>
+                <div className="d-flex flex-column align-items-center">
+                  <DiJavascript1 style={{ color: "#f7df1e" }} />
+                  <span
+                    className="pt-2"
+                    style={{ fontSize: "0.75rem", color: "#f7df1e" }}>
+                    Javascript
+                  </span>
+                </div>
+                <div className="d-flex flex-column align-items-center">
+                  <FaHtml5 style={{ color: "#F16529" }} />
+                  <span
+                    className="pt-2"
+                    style={{ fontSize: "0.75rem", color: "#F16529" }}>
+                    HTML5
+                  </span>
+                </div>
+                <div className="d-flex flex-column align-items-center">
+                  <IoLogoCss3 style={{ color: "#264de4" }} />
+                  <span
+                    className="pt-2"
+                    style={{ fontSize: "0.75rem", color: "#264de4" }}>
+                    CSS3
+                  </span>
+                </div>
               </div>
             </Fade>
           </div>
@@ -45,7 +73,7 @@ function Skills() {
               <div
                 data-aos="fade-left"
                 className="familiar-wrapper-2-left d-flex justify-content-center align-items-center "
-                style={{ height: "30vh", width: "35vw" }}>
+                style={{ height: "30vh", width: "30vw" }}>
                 <h2 className="mont text-light">Familiar</h2>
               </div>
             </Fade>
@@ -54,10 +82,38 @@ function Skills() {
                 data-aos="fade-right"
                 className="familiar-wrapper-2-right d-flex  justify-content-around align-items-center  "
                 style={{ fontSize: "4rem", width: "65vw", height: "30vh" }}>
-                <SiMongodb style={{ color: "#3FA037" }} />
-                <SiExpress style={{ color: "red" }} />
-                <FaNodeJs style={{ color: "#68A063" }} />
-                <SiNextdotjs style={{ color: "#ffff" }} />
+                <div className="d-flex flex-column align-items-center">
+                  <SiMongodb style={{ color: "#3FA037" }} />
+                  <span
+                    className="pt-2"
+                    style={{ fontSize: "0.75rem", color: "#3FA037" }}>
+                    MongoDB
+                  </span>
+                </div>
+                <div className="d-flex flex-column align-items-center">
+                  <SiExpress style={{ color: "red" }} />
+                  <span
+                    className="pt-2"
+                    style={{ fontSize: "0.75rem", color: "red" }}>
+                    ExpressJS
+                  </span>
+                </div>
+                <div className="d-flex flex-column align-items-center">
+                  <FaNodeJs style={{ color: "#68A063" }} />
+                  <span
+                    className="pt-2"
+                    style={{ fontSize: "0.75rem", color: "#68A063" }}>
+                    NodeJS
+                  </span>
+                </div>
+                <div className="d-flex flex-column align-items-center">
+                  <SiNextdotjs style={{ color: "#ffff" }} />
+                  <span
+                    className="pt-2"
+                    style={{ fontSize: "0.75rem", color: "#ffff" }}>
+                    NextJS
+                  </span>
+                </div>
               </div>
             </Fade>
           </div>
