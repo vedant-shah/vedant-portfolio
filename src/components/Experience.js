@@ -46,32 +46,39 @@ function Experience() {
               <Events style={{ fontSize: "0.65rem" }} id="events">
                 <TextEvent
                   date="Apr 2022 - Present"
-                  text="######React Developer Intern @ *Neelitech*  
-                  
-                Developed a Payroll Automation Software. Contributed in
+                  text="React Developer Intern @ *Neelitech*  
+                Developed multiple business oriented Software. Contributed in
                 frontend, features, functionality and logic building."
                 />
 
                 <TextEvent
                   date="2020-2024"
-                  text="######B.E. Information Science and Engineering**  
-                ***NMIT, Bangalore***  
+                  text="B.E. Information Science and Engineering**  
+                *NMIT, Bangalore*  
+
                 9.11 CGPA (Upto 4th sem)  
                 "
                 />
                 <TextEvent
                   date="Mar 2020"
-                  text="######12th-ISC Board**  
-                ***Vidya Niketan School***  
+                  text="12th-ISC Board  
+                *Vidya Niketan School*  
                 91% : PCMC
                 "
                 />
                 <TextEvent
                   date="Oct-Nov 2019"
-                  text="######Head of Information Technology**  
-                ***Bangalore Model United Nations***  
+                  text="Head of Information Technology  
+                *Bangalore Model United Nations*  
                 Various Roles like Social Media Handle, Registration Management, Designing of Posters and
                 Certificates.
+                "
+                />
+                <TextEvent
+                  date="Apr 2019"
+                  text="Summer Intern  
+                *Ramaiah University of Applied Sciences*  
+                Developed a working prototype of a UGV. The solution provided a base for further advancemets in the defence industry.
                 "
                 />
               </Events>
