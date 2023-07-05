@@ -17,9 +17,13 @@ import {
 function Nav() {
   const [showBasic, setShowBasic] = useState(false);
   const saveFile = async () => {
-    const res = await fetch("http://localhost:5000/download/resume");
-    const blob = await res.blob();
-    download(blob, "Vedant-Shah-Resume.pdf");
+    const url = "http://localhost:3000/Vedant's_Resume.pdf";
+    const aTag = document.createElement("a");
+    aTag.href = url;
+    aTag.setAttribute("download", "Vedant's_Resume.pdf");
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
   };
   return (
     <>
@@ -43,7 +47,10 @@ function Nav() {
             onClick={() => setShowBasic(!showBasic)}>
             <MDBIcon icon="bars" fas />
           </MDBNavbarToggler>
-          <MDBCollapse navbar show={showBasic}>
+          <MDBCollapse
+            navbar
+            show={showBasic}
+            style={{ backgroundColor: "rgba(0,0,0,0.9)" }}>
             <MDBNavbarNav className="mr-auto mb-2 mb-lg-0 d-flex justify-content-center">
               <MDBNavbarItem>
                 <MDBNavbarLink
@@ -74,16 +81,18 @@ function Nav() {
                 </MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
+            <MDBBtn
+              outline
+              className="py-1 "
+              onClick={saveFile}
+              style={{
+                color: "rgb(100, 255, 218)",
+                borderColor: "rgb(100, 255, 218)",
+                minWidth: "20%",
+              }}>
+              Download Resume
+            </MDBBtn>
           </MDBCollapse>
-          <MDBBtn
-            outline
-            onClick={saveFile}
-            style={{
-              color: "rgb(100, 255, 218)",
-              borderColor: "rgb(100, 255, 218)",
-            }}>
-            Download Resume
-          </MDBBtn>
         </MDBContainer>
       </MDBNavbar>
     </>

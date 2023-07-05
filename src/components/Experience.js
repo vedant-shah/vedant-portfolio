@@ -45,8 +45,8 @@ function Experience() {
             <Timeline theme={customTheme}>
               <Events style={{ fontSize: "0.65rem" }} id="events">
                 <TextEvent
-                  date="Apr 2022 - Present"
-                  text="React Developer Intern @ *Neelitech*  
+                  date="Apr 2022 - Mar 2023"
+                  text="Software Developer Intern @ *Neelitech*  
                 Developed multiple business oriented Software. Contributed in
                 frontend, features, functionality and logic building."
                 />

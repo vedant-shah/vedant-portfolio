@@ -1,11 +1,20 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 import { FaReact, FaHtml5, FaNodeJs } from "react-icons/fa";
-import { DiJavascript1 } from "react-icons/di";
+import { DiJavascript1, DiJava } from "react-icons/di";
 import { IoLogoCss3 } from "react-icons/io";
-import { SiMongodb, SiExpress, SiNextdotjs } from "react-icons/si";
+import { SiMongodb, SiExpress, SiNextdotjs, SiMysql } from "react-icons/si";
 
 function Skills() {
+  const saveFile = async () => {
+    const url = "http://localhost:3000/Vedant's_Resume.pdf";
+    const aTag = document.createElement("a");
+    aTag.href = url;
+    aTag.setAttribute("download", "Vedant's_Resume.pdf");
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
+  };
   return (
     <>
       <div
@@ -50,19 +59,19 @@ function Skills() {
                   </span>
                 </div>
                 <div className="d-flex flex-column align-items-center">
-                  <FaHtml5 style={{ color: "#F16529" }} />
+                  <SiMysql style={{ color: "#d88604" }} />
                   <span
                     className="pt-2"
-                    style={{ fontSize: "0.75rem", color: "#F16529" }}>
-                    HTML5
+                    style={{ fontSize: "0.75rem", color: "#d88604" }}>
+                    SQL
                   </span>
                 </div>
                 <div className="d-flex flex-column align-items-center">
-                  <IoLogoCss3 style={{ color: "#264de4" }} />
+                  <DiJava style={{ color: "#0c83bd" }} />
                   <span
                     className="pt-2"
-                    style={{ fontSize: "0.75rem", color: "#264de4" }}>
-                    CSS3
+                    style={{ fontSize: "0.75rem", color: "#0c83bd " }}>
+                    Java
                   </span>
                 </div>
               </div>
@@ -118,6 +127,19 @@ function Skills() {
             </Fade>
           </div>
         </div>
+        <p style={{ color: "ghostwhite" }}>
+          More Skills on my{" "}
+          <span
+            onClick={saveFile}
+            style={{
+              textDecoration: "underline",
+              cursor: "pointer",
+              color: "rgb(5, 255, 161)",
+            }}>
+            Resume
+          </span>
+          !
+        </p>
       </div>
     </>
   );

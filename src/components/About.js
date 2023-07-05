@@ -6,9 +6,13 @@ import { MDBBtn } from "mdb-react-ui-kit";
 
 function About() {
   const saveFile = async () => {
-    const res = await fetch("http://localhost:5000/download/resume");
-    const blob = await res.blob();
-    download(blob, "Vedant-Shah-Resume.pdf");
+    const url = "http://localhost:3000/Vedant's_Resume.pdf";
+    const aTag = document.createElement("a");
+    aTag.href = url;
+    aTag.setAttribute("download", "Vedant's_Resume.pdf");
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
   };
   return (
     <>
@@ -37,7 +41,7 @@ function About() {
             </p>
             <MDBBtn
               outline
-              className="my-3"
+              className="my-3 downR"
               onClick={saveFile}
               style={{
                 color: "rgb(224, 0, 133)",

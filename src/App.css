@@ -119,6 +119,9 @@
     justify-content: center !important;
     text-align: center;
   }
+  .downR {
+    display: none;
+  }
 }
 
 .card {

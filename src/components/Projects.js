@@ -23,12 +23,12 @@ function Projects() {
       stack: " NextJs • ReactJs • MaterialUI",
     },
     {
-      name: "Weather App",
-      github: "https://github.com/vedant-shah/weather-app",
-      hosting: "https://weather-app-vedant-shah.netlify.app/",
+      name: "SettleUp",
+      github: "https://github.com/vedant-shah/settleUp",
+      hosting: "https://settleup-2c61f.web.app/home",
       description:
-        "This weather app shows the live weather data of 200000+ cities and countries. User can search for city/country name in the search bar.",
-      stack: " Javascript • Bootstrap5",
+        "SettleUp is a simple yet powerful tool for splitting bills with friends, roommates, colleagues, and couples. It lets you easily breakdown the budget of a group and track expenses during any occasion.",
+      stack: " ReactJs • Firebase",
     },
   ];
   return (
