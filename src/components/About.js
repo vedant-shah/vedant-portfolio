@@ -6,7 +6,7 @@ import { MDBBtn } from "mdb-react-ui-kit";
 
 function About() {
   const saveFile = async () => {
-    const url = "http://localhost:3000/Vedant's_Resume.pdf";
+    const url = "/Vedant's_Resume.pdf";
     const aTag = document.createElement("a");
     aTag.href = url;
     aTag.setAttribute("download", "Vedant's_Resume.pdf");
