@@ -7,6 +7,8 @@ import { DiGithubBadge } from "react-icons/di";
 import connect from "../images/connect.svg";
 import { Fade, JackInTheBox } from "react-awesome-reveal";
 import Spinner from "./Spinner";
+import { db } from "../config/firebase";
+import { addDoc, collection } from "firebase/firestore";
 
 function Contact() {
   const [alert, setAlert] = useState("");
@@ -68,20 +70,27 @@ function Contact() {
               onSubmit={async (values, { resetForm }) => {
                 console.log(values);
                 setLoading(true);
+                const contactCollectionRef = collection(db, "contact");
                 try {
-                  const rawResponse = await fetch(
-                    "http://localhost:5000/api/contact",
-                    {
-                      method: "POST",
-                      headers: {
-                        "Content-Type": "application/json",
-                      },
-                      body: JSON.stringify(values),
-                    }
+                  // const rawResponse = await fetch(
+                  //   "http://localhost:5000/api/contact",
+                  //   {
+                  //     method: "POST",
+                  //     headers: {
+                  //       "Content-Type": "application/json",
+                  //     },
+                  //     body: JSON.stringify(values),
+                  //   }
+                  // );
+                  // console.log("resp ", rawResponse);
+                  // const content = await rawResponse.json();
+                  // console.log(content);
+                  // throw new Error("Bleh");
+                  const rawResponse = await addDoc(
+                    contactCollectionRef,
+                    values
                   );
-                  console.log("resp ", rawResponse);
-                  const content = await rawResponse.json();
-                  console.log(content);
+
                   if (rawResponse) {
                     setAlert("success");
                     setLoading(false);
@@ -95,7 +104,7 @@ function Contact() {
                   setAlert("failure");
                   setTimeout(() => {
                     setAlert("");
-                    resetForm();
+                    // resetForm();
                   }, 3000);
                 }
               }}>

@@ -76,6 +76,9 @@
   form,
   .left-contact {
     width: 85% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .familiar-wrapper-1,
   .familiar-wrapper-2 {
@@ -90,7 +93,7 @@
   }
   .familiar-wrapper-1-left,
   .familiar-wrapper-2-left {
-    height: 20vh !important;
+    height: 15vh !important;
   }
   .familiar-wrapper-1-right,
   .familiar-wrapper-2-right {
