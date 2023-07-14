@@ -17,7 +17,7 @@ function Contact() {
     <>
       <div
         className="container d-flex contact px-4 align-items-center justify-content-center"
-        style={{ height: "80vh" }}>
+        style={{ height: "100vh" }}>
         <JackInTheBox style={{ width: "55%" }} className="left-contact">
           <div
             data-aos="fade-right"

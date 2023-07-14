@@ -35,7 +35,7 @@ function Projects() {
     <>
       <div
         className="container d-flex flex-column px-4 align-items-center justify-content-center"
-        style={{ height: "80vh" }}>
+        style={{ height: "100vh" }}>
         <Slide direction="down">
           <h1 data-aos="fade-down" className="my-2 mont">
             My <span style={{ color: "rgb(100, 255, 218)" }}>Projects</span>

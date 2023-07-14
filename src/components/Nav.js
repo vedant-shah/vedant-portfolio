@@ -17,7 +17,7 @@ import {
 function Nav() {
   const [showBasic, setShowBasic] = useState(false);
   const saveFile = async () => {
-    const url = "http://localhost:3000/Vedant's_Resume.pdf";
+    const url = "/Vedant's_Resume.pdf";
     const aTag = document.createElement("a");
     aTag.href = url;
     aTag.setAttribute("download", "Vedant's_Resume.pdf");
